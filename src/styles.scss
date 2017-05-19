@@ -1,2 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("node_modules\bootstrap\dist\css\bootstrap.min.css");
+@import url(https://bootswatch.com/cyborg/bootstrap.min.css);
+@import url("assets/font-awesome-4.7.0/css/font-awesome.min.css");
+
+.main {
+    border-bottom: #333 1px solid;
+    padding: 30px;
+}

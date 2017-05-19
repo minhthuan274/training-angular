@@ -1,0 +1,34 @@
+<h1>
+  Need Music?
+</h1>
+
+<p class="lead">Use the ngSpotify app to browse new releases and find your favorite songs<br> All you get is this text and a mostly barebones HTML document.</p>
+
+<form action="">
+  <div class="form-group">
+    <input 
+      id="searchArtists"
+      type="text" 
+      class="form-control"
+      placeholder="Search Artists..."
+      [(ngModel)]="searchStr"
+      name="searchStr"
+      >
+  </div>
+</form>
+
+<div *ngIf="searchRes">
+  <div *ngFor="let artist of searchRes">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="search-res well">
+          <a routerLink="artist/{{artist.id}}"><h4> {{ artist.name }}</h4></a>
+          <div>
+            <strong>Genres: </strong>
+            <span *ngFor="let genre of artist.genres">{{ genre }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
